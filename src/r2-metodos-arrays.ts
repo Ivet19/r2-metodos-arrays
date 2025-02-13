@@ -50,13 +50,13 @@ const wordsList = words.join(" ");
 console.log(wordsList);
 
 let examGrades: number[] = [];
-examGrades = [6, 5.5, 8, 7];
+examGrades = [6, 5.5, 8, 7, 4];
 const examGradesOrdered = examGrades.toSorted(function (gradeA, gradeB) {
   return gradeA - gradeB;
 });
 
-const examGradesApproved = examGrades.filter((examGrade) => examGrade >= 5);
-console.log(`Las notas aprobadas son ${examGradesApproved.join(", ")}.`);
+const approvedExamGrades = examGrades.filter((examGrade) => examGrade >= 5);
+console.log(`Las notas aprobadas son ${approvedExamGrades.join(", ")}.`);
 
 const initialValue = 0;
 const examsGradesAverage =
@@ -65,9 +65,9 @@ const examsGradesAverage =
 
 console.log(`La nota media es ${examsGradesAverage}.`);
 
-let highestExamGrade = examGradesOrdered.at(0);
+const highestExamGrade = examGradesOrdered.at(0);
 
-let lowestExamGrade = examGradesOrdered.at(-1);
+const lowestExamGrade = examGradesOrdered.at(-1);
 
 console.log(
   `La nota más alta es ${highestExamGrade} y la nota más baja es ${lowestExamGrade}.`
