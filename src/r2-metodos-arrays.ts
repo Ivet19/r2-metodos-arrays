@@ -51,7 +51,9 @@ console.log(wordsList);
 
 let examGrades: number[] = [];
 examGrades = [6, 5.5, 8, 7];
-const examGradesOrdered = examGrades.toSorted();
+const examGradesOrdered = examGrades.toSorted(function (a, b) {
+  return a - b;
+});
 
 const examGradesApproved = examGrades.filter((examGrade) => examGrade >= 5);
 console.log(`Las notas aprobadas son ${examGradesApproved.join(", ")}.`);
