@@ -1,8 +1,7 @@
 const years = [];
 
-for (let position = 0; position <= 2000; position++) {
+for (let position = 2000; position <= 2025; position++) {
   years.push(position);
-  years.reverse();
 }
 console.log(years);
 
@@ -47,7 +46,7 @@ const words = [
   "Con",
 ];
 words.reverse();
-let wordsList = words.join(", ");
+let wordsList = words.join(" ");
 console.log(wordsList);
 
 let examGrades: number[] = [];
