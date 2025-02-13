@@ -46,18 +46,18 @@ const words = [
   "Con",
 ];
 words.reverse();
-let wordsList = words.join(" ");
+const wordsList = words.join(" ");
 console.log(wordsList);
 
 let examGrades: number[] = [];
 examGrades = [6, 5.5, 8, 7];
-const examGradesOrdered = examGrades.sort();
+const examGradesOrdered = examGrades.toSorted();
 
 const examGradesApproved = examGrades.filter((examGrade) => examGrade >= 5);
 console.log(`Las notas aprobadas son ${examGradesApproved.join(", ")}.`);
 
 const initialValue = 0;
-let examsGradesAverage =
+const examsGradesAverage =
   examGrades.reduce((sum, examGrade) => sum + examGrade, initialValue) /
   examGrades.length;
 
