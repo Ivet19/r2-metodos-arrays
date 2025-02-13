@@ -51,8 +51,8 @@ console.log(wordsList);
 
 let examGrades: number[] = [];
 examGrades = [6, 5.5, 8, 7];
-const examGradesOrdered = examGrades.toSorted(function (a, b) {
-  return a - b;
+const examGradesOrdered = examGrades.toSorted(function (gradeA, gradeB) {
+  return gradeA - gradeB;
 });
 
 const examGradesApproved = examGrades.filter((examGrade) => examGrade >= 5);
@@ -65,18 +65,10 @@ const examsGradesAverage =
 
 console.log(`La nota media es ${examsGradesAverage}.`);
 
-let highestExamGrade = 0;
-for (let examGrade of examGrades) {
-  if (highestExamGrade < examGrade) {
-    highestExamGrade = examGrade;
-  }
-}
-let lowestExamGrade = examGradesOrdered[0];
-for (let examGrade of examGradesOrdered) {
-  if (lowestExamGrade > examGrade) {
-    lowestExamGrade = examGrade;
-  }
-}
+let highestExamGrade = examGradesOrdered.at(0);
+
+let lowestExamGrade = examGradesOrdered.at(-1);
+
 console.log(
   `La nota más alta es ${highestExamGrade} y la nota más baja es ${lowestExamGrade}.`
 );
